@@ -1,0 +1,254 @@
+/* перезагрузка css */
+* {
+  padding: 0px;
+  margin: 0px;
+  outline: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-font-color);
+}
+
+.content > div {
+  border: 1px solid black;
+}
+
+/* Константы */
+:root {
+  --main_size_font: 1.5rem;
+  --main-font-color: white;
+  --second-font-color: black;
+  --main-color: rgb(25, 146, 212);
+  --second-color: rgb(226, 232, 240);
+}
+
+/* настройки иконок и картинок */
+.icon {
+  height: 1.4rem;
+  align-self: center;
+}
+
+.picture {
+  height: 5ch;
+  align-self: center;
+}
+.picture_big {
+  height: 8ch;
+  align-self: center;
+}
+
+/* Настройка макета grid */
+.content {
+  display: grid;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main_content";
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 4fr;
+  height: 100vh;
+  /* width: 100vw; */
+}
+
+/* Элементы макета */
+.sidebar {
+  grid-area: sidebar;
+  display: grid;
+  grid-template-rows: 1fr 8fr 14fr;
+  gap: 2rem;
+  background-color: var(--main-color);
+  padding: 1rem 0 0 1rem;
+}
+
+.header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.main_content {
+  grid-area: main_content;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  background-color: var(--second-color);
+}
+
+/* Настройки раздела sidebar  */
+.slider_top {
+  font-size: calc(var(--main_size_font) * 1.5);
+  padding-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+}
+
+.content_links a,
+.options_links a {
+  align-self: center;
+}
+
+.content_links {
+  grid-template-rows: repeat(6, min(40px, 20%));
+}
+
+.options_links {
+  grid-template-rows: repeat(auto-fill, min(40px, 20%));
+}
+
+.content_links,
+.options_links {
+  font-size: var(--main_size_font);
+  align-content: center;
+  grid-template-columns: 1fr 6fr;
+  display: grid;
+}
+
+/* Настройки раздела header  */
+.header button {
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 4ch;
+  height: 3rem;
+  width: 100%;
+  color: var(--main-font-color);
+}
+
+.header p {
+  font-weight: bold;
+}
+
+.header_1 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+  padding: 0 1rem;
+}
+
+.header_1 img {
+  justify-self: center;
+}
+
+.header_1 input {
+  width: 100%;
+  border-radius: 10px;
+  background-color: var(--second-color);
+  border: none;
+  padding-left: 5px;
+  height: var(--main_size_font);
+}
+
+.header_2 {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 4fr;
+  padding-left: 13vw;
+  gap: 5px;
+}
+.header_3 {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-areas:
+    "cat 1text"
+    "cat 2text";
+}
+
+.header_3 img {
+  grid-area: cat;
+  justify-self: center;
+}
+
+.header_3 p {
+  grid-area: 1text;
+}
+
+.header_3 h2 {
+  grid-area: 2text;
+}
+
+.header_4 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+/* Настроки раздела main_content */
+
+.cards {
+  display: grid;
+  grid-template-rows: 3rem 3fr 3fr 3fr;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 0px 10px 10px;
+}
+
+.cards > p,
+.others > p {
+  align-self: end;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.card {
+  background-color: white;
+  border-left: 8px solid orange;
+  border-radius: 5px;
+  padding: 10px;
+  display: grid;
+  grid-template-rows: 6rem 1fr;
+  margin: 10px;
+  align-items: center;
+}
+
+.card > div {
+  place-self: end end;
+}
+
+.others {
+  display: grid;
+  grid-template-rows: 3rem 1fr 3rem 1fr;
+  padding: 0 10px 10px 0px;
+}
+
+.announ,
+.trend {
+  background-color: white;
+  margin: 10px;
+  padding: 10px 10px 0 10px;
+  display: grid;
+  border-radius: 5px;
+}
+
+.trend > div {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+}
+
+.hr {
+  margin: 5px 0;
+  height: 0;
+  border: none;
+  box-shadow: 0px 0px 3px 1px grey;
+}
+
+.announ p {
+  font-size: 0.8rem;
+}
+
+/* медиа запросы */
+/* @media (max-width: 660px), (min-width: 720px) and (max-width: 920px) {
+  .content {
+    grid-template-columns: 1fr;
+
+    grid-template-rows: 1fr;
+    height: auto;
+  }
+} */
