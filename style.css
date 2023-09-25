@@ -115,6 +115,10 @@ a {
   grid-template-columns: 1fr 6fr;
 }
 
+.content_links a {
+  align-self: center;
+}
+
 /* Настройки раздела header  */
 .header button {
   background-color: var(--main-color);
@@ -269,5 +273,9 @@ a {
     position: fixed;
     width: 100%;
     height: 100%;
+  }
+
+  .cards p + div {
+    display: none;
   }
 }
