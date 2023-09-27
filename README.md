@@ -15,4 +15,4 @@ admin_dashboard_grid uses HTML, CSS and JavaScript. It uses CSS Grid Layout to c
 
 ## Credits
 
-This project was inspired by [The Odin Project], which is an open source curriculum for learning web development.
+This project was inspired by [[The Odin Project](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-admin-dashboard)], which is an open source curriculum for learning web development.
