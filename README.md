@@ -7,7 +7,7 @@ admin_dashboard_grid is a web app that shows how to use CSS Grid Layout to creat
 
 ## How to use
 
-To use admin_dashboard_grid, just open the index.html file in your browser. You can change the browser window width to see how the page elements adapt to different resolutions. You can also open the page on a mobile device to see the mobile version.
+To use admin_dashboard_grid, simply download project open the index.html file in your browser. You can change the browser window width to see how the page elements adapt to different resolutions. You can also open the page on a mobile device to see the mobile version.
 
 ## How it works
 
